@@ -17,7 +17,10 @@ const Navbar = () => {
           <div className="navigate">
             <ul className="hidden lg:flex items-center space-x-6">
               {li.map((item) => (
-                <li key={item} className="cursor-pointer">
+                <li
+                  key={item}
+                  className="cursor-pointer text-white capitalize "
+                >
                   {item}
                 </li>
               ))}
