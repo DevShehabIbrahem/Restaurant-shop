@@ -12,14 +12,14 @@ const Navbar = () => {
   return (
     <nav>
       <div className="container m-auto text-[16px]">
-        <div className="content flex items-center justify-between p-8 bg-transparent">
+        <div className="bg-white content flex items-center justify-between p-4 lg:p-8 lg:bg-transparent">
           <div className="logo text-[30px]">Handout</div>
           <div className="navigate">
             <ul className="hidden lg:flex items-center space-x-6">
               {li.map((item) => (
                 <li
                   key={item}
-                  className="cursor-pointer text-white capitalize "
+                  className="cursor-pointer text-white capitalize font-bold	text-[18px] "
                 >
                   {item}
                 </li>
@@ -29,7 +29,7 @@ const Navbar = () => {
             <Bounce left>
               <ul className={show ? "showMenu" : "hideMenu"}>
                 {li.map((item) => (
-                  <a href="##" key={item}>
+                  <a href="##" key={item} className="text-[18px]">
                     <Bounce left cascade>
                       <li>{item}</li>
                     </Bounce>
