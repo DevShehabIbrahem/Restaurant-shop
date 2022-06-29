@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&family=Poppins:ital,wght@0,400;0,500;1,700&display=swap");
+.carousel-info {
+  width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+}
+@media (max-width: 767px) {
+  .carousel-info {
+    width: 100%;
+    text-align: center;
+  }
+}
+.carousel-info ul,
+.carousel-info img,
+.carousel-info h1 {
+  padding-bottom: 15px;
+}
+.carousel-info h1:first-of-type {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.carousel-info h1:nth-child(3) {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 80px;
+}
+@media (max-width: 767px) {
+  .carousel-info h1:nth-child(3) {
+    width: 100%;
+    font-size: 30px;
+  }
+}
+.carousel-info ul > li {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .carousel-info ul > li {
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.carousel-info ul span {
+  padding-right: 10px;
+  color: #fbb403;
+  font-size: 50px;
+}
+@media (max-width: 767px) {
+  .carousel-info ul span {
+    font-size: 18px;
+    padding-right: 7px;
+  }
+}

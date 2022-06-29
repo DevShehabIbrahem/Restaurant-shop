@@ -13,7 +13,9 @@ const Navbar = () => {
     <nav>
       <div className="container m-auto text-[16px]">
         <div className="bg-white content flex items-center justify-between p-4 lg:p-8 lg:bg-transparent">
-          <div className="logo text-[30px]">Handout</div>
+          <div className="logo text-[30px] font-bold lg:text-white">
+            Handout
+          </div>
           <div className="navigate">
             <ul className="hidden lg:flex items-center space-x-6">
               {li.map((item) => (
@@ -40,16 +42,16 @@ const Navbar = () => {
           </div>
           {/* End  Mobile-Menu*/}
 
-          <div className="online-order hidden lg:flex items-center space-x-7">
+          <div className="online-order hidden lg:flex items-center space-x-7 ">
             <div>
-              <BiCartAlt fontSize={35} />
+              <BiCartAlt fontSize={35} className="text-white" />
             </div>
             <button className="bg-orangeColor p-4 rounded-[100px]">
               {words.button}
             </button>
           </div>
           <div
-            className="flex items-center space-x-7 cursor-pointer lg:hidden"
+            className="flex items-center space-x-7 cursor-pointer  lg:hidden"
             onClick={() => setShow(!show)}
           >
             <GiHamburgerMenu fontSize={35} />
