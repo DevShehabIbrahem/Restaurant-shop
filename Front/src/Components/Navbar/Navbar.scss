@@ -35,7 +35,9 @@ nav{
             color: rgb(90, 89, 89);
             transition: .4s all ease-in-out;
 
-           
+            &:hover{
+                color: #fbb403;
+            }
         }
     }
    
