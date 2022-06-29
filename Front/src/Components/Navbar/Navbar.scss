@@ -2,21 +2,27 @@ nav{
     position: fixed;
     width: 100%;
     z-index: 1001;
+    @media (max-width:1024px) {
+        background-color: white;
+
+        
+    }
 }
 
 //Mobile-Menu
 
 .showMenu{
     display: flex;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     position: absolute;
     top: 0;
     left: 0;
     padding: 15px;
-   width: 50%;
- 
+    width: 50%;
     background-color: white;
+    
     z-index: 100;
     a{
         margin-bottom: 1.5rem;
