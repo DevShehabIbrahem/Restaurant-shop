@@ -1,11 +1,11 @@
-import React from "react";
-import Carousel from "../carousel/Carousel";
+import { Carousel, Items } from "../../Components";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Carousel />
-    </div>
+      <Items />
+    </>
   );
 };
 
