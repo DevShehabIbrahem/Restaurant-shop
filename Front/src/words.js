@@ -4,4 +4,9 @@ export const words = {
   button: "ORDER ONLINE",
   update: "update menu's item",
   chicken: "chickensup burger",
+  listOfCarousel: [
+    "integrated with mushroom",
+    " cheese integrated",
+    " bacon flavour",
+  ],
 };
