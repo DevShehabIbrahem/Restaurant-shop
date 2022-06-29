@@ -21,7 +21,7 @@ const Navbar = () => {
               {li.map((item) => (
                 <li
                   key={item}
-                  className="cursor-pointer text-white capitalize font-bold	text-[18px] "
+                  className="cursor-pointer text-white capitalize font-bold	text-[18px] hover:text-[#fbb403] transition-all delay-200 "
                 >
                   {item}
                 </li>
