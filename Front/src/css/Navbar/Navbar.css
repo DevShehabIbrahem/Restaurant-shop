@@ -34,9 +34,6 @@ nav {
   color: rgb(90, 89, 89);
   transition: 0.4s all ease-in-out;
 }
-.showMenu a li:hover {
-  color: #fbb403;
-}
 @media (min-width: 1024px) {
   .showMenu {
     display: none;
