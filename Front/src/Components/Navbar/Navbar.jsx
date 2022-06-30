@@ -1,27 +1,48 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { words } from "../../words";
 import { BiCartAlt } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Bounce from "react-reveal/Bounce";
+
 import "../../css/Navbar/Navbar.css";
 
 const Navbar = () => {
+  const [styles, setStyles] = useState(false);
   const [show, setShow] = useState(false);
   const { li } = words;
 
+  const Scroll = () => {
+    if (window.scrollY >= 820) {
+      setStyles(true);
+    } else {
+      setStyles(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", Scroll);
+
+    return () => window.removeEventListener("scroll", Scroll);
+  }, []);
+
   return (
     <nav>
-      <div className="container m-auto text-[16px]">
-        <div className="bg-white content flex items-center justify-between p-4 lg:p-8 lg:bg-transparent">
-          <div className="logo text-[30px] font-bold lg:text-white">
-            Handout
-          </div>
+      <div className=" text-[16px]">
+        <div
+          className={
+            styles
+              ? "bg-white  flex items-center justify-between p-4 text-black duration-300 border-b-4"
+              : "flex items-center justify-between p-4 lg:p-8 lg:bg-transparent text-black lg:text-white duration-300"
+          }
+        >
+          <div className="logo text-[30px] font-bold ">Handout</div>
+
           <div className="navigate">
             <ul className="hidden lg:flex items-center space-x-6">
               {li.map((item) => (
                 <li
                   key={item}
-                  className="cursor-pointer text-white capitalize font-bold	text-[18px] hover:text-[#fbb403] transition-all delay-200 "
+                  className="cursor-pointer  capitalize font-bold	text-[18px] hover:text-[#fbb403] duration-300 "
                 >
                   {item}
                 </li>
@@ -46,7 +67,7 @@ const Navbar = () => {
             <div>
               <BiCartAlt fontSize={35} className="text-white" />
             </div>
-            <button className="bg-orangeColor p-4 rounded-[100px]">
+            <button className="bg-orangeColor p-4 rounded-[100px] text-black">
               {words.button}
             </button>
           </div>
