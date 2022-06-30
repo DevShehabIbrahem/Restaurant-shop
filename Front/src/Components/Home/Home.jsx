@@ -1,10 +1,11 @@
-import { Carousel, Items } from "../../Components";
+import { Carousel, Items, WelcomeSection } from "../../Components";
 
 const Home = () => {
   return (
     <>
       <Carousel />
       <Items />
+      <WelcomeSection />
     </>
   );
 };
