@@ -27,15 +27,15 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className=" text-[16px]">
+      <div className="text-[16px]">
         <div
           className={
             styles
-              ? "bg-white  flex items-center justify-between p-4 text-black duration-300 border-b-4"
-              : "flex items-center justify-between p-4 lg:p-8 lg:bg-transparent text-black lg:text-white duration-300"
+              ? "bg-white flex items-center justify-between lg:justify-around p-4 text-black duration-300 border-b-4 px-12"
+              : "flex items-center justify-between lg:justify-around p-4 lg:p-6 mx-auto lg:bg-transparent text-black lg:text-white duration-300 "
           }
         >
-          <div className="logo text-[30px] font-bold ">Handout</div>
+          <div className="logo text-[30px] font-bold">Handout</div>
 
           <div className="navigate">
             <ul className="hidden lg:flex items-center space-x-6">
@@ -65,9 +65,13 @@ const Navbar = () => {
 
           <div className="online-order hidden lg:flex items-center space-x-7 ">
             <div>
-              <BiCartAlt fontSize={35} className="text-white" />
+              <BiCartAlt
+                fontSize={35}
+                className={styles ? "text-black" : "text-white"}
+              />
             </div>
-            <button className="bg-orangeColor p-4 rounded-[100px] text-black">
+
+            <button className="bg-orangeColor p-4 rounded-[100px] text-black font-semibold">
               {words.button}
             </button>
           </div>

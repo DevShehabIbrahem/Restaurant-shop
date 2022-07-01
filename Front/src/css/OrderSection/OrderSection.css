@@ -1,0 +1,43 @@
+.wrraper {
+  background-image: url("../../Asset/shape/others-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  margin: 150px auto;
+  padding: 20px;
+}
+@media (max-width: 1000px) {
+  .wrraper {
+    background-image: none;
+    height: auto;
+  }
+  .wrraper .shape {
+    display: none;
+  }
+}
+
+.infoSection {
+  background-color: white;
+  padding: 3rem;
+  max-width: 400px;
+  transition: 0.5s all ease-in;
+  box-shadow: 0.5px 0.5px;
+  font-size: 15px;
+  margin-bottom: 1rem;
+}
+.infoSection h1,
+.infoSection p {
+  transition: 0.5s all ease-in;
+}
+.infoSection h1 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+.infoSection:hover {
+  background-color: #fbb403;
+  transform: translateY(-10px);
+}
+.infoSection:hover h1,
+.infoSection:hover p {
+  color: white;
+}

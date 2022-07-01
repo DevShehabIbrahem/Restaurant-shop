@@ -16,10 +16,28 @@ export const words = {
     " bacon flavour",
   ],
 
-  itemsWords: [
+  itemsWordsone: [
     { title: "Hamburger", img: require("./Asset/Items/1.png") },
     { title: "Yummy Donuts", img: require("./Asset/Items/2.png") },
+  ],
+
+  itemsWordtow: [
     { title: "Ice Cream", img: require("./Asset/Items/3.png") },
     { title: "Craft Pizza", img: require("./Asset/Items/4.png") },
+  ],
+
+  othersection: [
+    {
+      title: "Mild Butter",
+      dec: "Learning do amet contur diiscivt suia non nuameius velit modi",
+    },
+    {
+      title: "Slices Beef",
+      dec: "Learning do amet contur diiscivt suia non nuameius velit modi",
+    },
+    {
+      title: "Sleek Onion",
+      dec: "Learning do amet contur diiscivt suia non nuameius velit modi",
+    },
   ],
 };
