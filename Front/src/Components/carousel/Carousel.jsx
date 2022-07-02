@@ -1,6 +1,5 @@
 import { Navigation } from "swiper";
 import { IoMdShareAlt } from "react-icons/io";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css";
@@ -28,11 +27,13 @@ const Carousel = () => {
         <Swiper className="mySwiper" navigation={true} modules={[Navigation]}>
           {images.map((img) => (
             <SwiperSlide className="flex justify-center items-center">
-              <div className="flex flex-col lg:flex-row  items-center justify-between  max-w-7xl mt-12 lg:my-24">
+              <div className="flex flex-col lg:flex-row items-center justify-between  max-w-7xl mt-12 lg:my-24">
                 <div className="carousel-info">
                   <img src={burger} alt="burger" />
+
                   <h1>{words.update}</h1>
                   <h1>{words.chicken}</h1>
+
                   <ul>
                     {listOfCarousel.map((list) => (
                       <li>
@@ -45,7 +46,7 @@ const Carousel = () => {
                   </ul>
                 </div>
 
-                <div className=" mb-10 w-[68%] lg:w-[50%]">
+                <div className="mb-10 w-[68%] lg:w-[50%]">
                   <img src={img} alt="carousel" />
                 </div>
               </div>

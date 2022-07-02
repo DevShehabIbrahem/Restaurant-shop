@@ -1,22 +1,25 @@
+import { Bounce } from "react-reveal";
 import shape1 from "../../Asset/shape/shape1.png";
 import shape2 from "../../Asset/shape/shape2.png";
 import "../../css/OrderSection/OrderSection.css";
-import { words } from "../../words";
+import { data } from "../../data/Data";
 
 const OrderSection = () => {
-  const { othersection } = words;
+  const { othersection } = data;
 
   return (
     <div className="wrraper">
       <div className="flex flex-col md:flex-row md:space-x-5 justify-around items-center ">
         <div className="flex justify-between lg:space-x-28">
           <div className="flex flex-col justify-around">
-            {othersection.map(({ title, dec }) => (
-              <div className="infoSection">
-                <h1 className="font-bold text-[20px]">{title}</h1>
-                <p className="text-[#737373]">{dec}</p>
-              </div>
-            ))}
+            <Bounce left cascade>
+              {othersection.map(({ title, dec }) => (
+                <div className="infoSection">
+                  <h1 className="font-bold text-[20px]">{title}</h1>
+                  <p className="text-[#737373]">{dec}</p>
+                </div>
+              ))}
+            </Bounce>
           </div>
 
           <div className="shape">
@@ -31,10 +34,12 @@ const OrderSection = () => {
 
           <div className="flex flex-col justify-around">
             {othersection.map(({ title, dec }) => (
-              <div className="infoSection">
-                <h1 className="font-bold text-[20px]">{title}</h1>
-                <p className="text-[#737373]">{dec}</p>
-              </div>
+              <Bounce right cascade>
+                <div className="infoSection">
+                  <h1 className="font-bold text-[20px]">{title}</h1>
+                  <p className="text-[#737373]">{dec}</p>
+                </div>
+              </Bounce>
             ))}
           </div>
         </div>
