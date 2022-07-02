@@ -1,9 +1,8 @@
-import { words } from "../../words";
+import { data } from "../../data/Data";
 import { Bounce } from "react-reveal";
 
 const Items = () => {
-  const { itemsWordsone, itemsWordtow } = words;
-  //flex flex-col md:flex-row items-center justify-around
+  const { itemsWordsone, itemsWordtow } = data;
   return (
     <>
       <div className="max-w-6xl mx-auto my-32">

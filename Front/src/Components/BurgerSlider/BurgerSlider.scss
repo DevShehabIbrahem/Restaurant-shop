@@ -1,0 +1,80 @@
+//max-w-[300px] mx-auto border-red-500 border-4 h-auto
+.swiper {
+  padding: 50px 0;
+}
+.animation {
+  position: relative;
+  top: 10px;
+  transition: 0.5s;
+
+  &:hover {
+    top: -10px;
+  }
+}
+.product-wrrap {
+  max-width: 300px;
+  max-height: 450px;
+  margin: 0 auto;
+  border: 2px dotted #ce7b04;
+  transition: 0.5s;
+  &:hover {
+    background-color: #fbb50383;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 22px;
+
+    span {
+      color: #ce7b04;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: 800;
+    }
+    p {
+      color: #737373;
+    }
+
+    button {
+      background-color: #1d1d1d;
+      padding: 8px 20px;
+      font-size: 15px;
+      border-radius: 15px;
+      color: #fff;
+      font-weight: 500;
+    }
+    p,
+    button {
+      margin: 15px 0;
+    }
+  }
+  .image {
+    position: relative;
+    height: auto;
+    img {
+      width: 80%;
+      margin: 0 auto;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      border-radius: 0 0 50% 50%;
+      width: 100%;
+      height: 50%;
+      z-index: -1;
+      background-color: #fef0cd;
+      transition: 0.5s;
+    }
+    &:hover::before {
+      background-color: #fbb403;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.swiper {
+  padding: 50px 0;
+}
+
+.animation {
+  position: relative;
+  top: 10px;
+  transition: 0.5s;
+}
+.animation:hover {
+  top: -10px;
+}
+
+.product-wrrap {
+  max-width: 300px;
+  max-height: 450px;
+  margin: 0 auto;
+  border: 2px dotted #ce7b04;
+  transition: 0.5s;
+}
+.product-wrrap:hover {
+  background-color: rgba(251, 181, 3, 0.5137254902);
+}
+.product-wrrap .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 22px;
+}
+.product-wrrap .content span {
+  color: #ce7b04;
+  font-size: 18px;
+  font-weight: 700;
+}
+.product-wrrap .content h1 {
+  font-size: 20px;
+  font-weight: 800;
+}
+.product-wrrap .content p {
+  color: #737373;
+}
+.product-wrrap .content button {
+  background-color: #1d1d1d;
+  padding: 8px 20px;
+  font-size: 15px;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 500;
+}
+.product-wrrap .content p,
+.product-wrrap .content button {
+  margin: 15px 0;
+}
+.product-wrrap .image {
+  position: relative;
+  height: auto;
+}
+.product-wrrap .image img {
+  width: 80%;
+  margin: 0 auto;
+}
+.product-wrrap .image::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0 0 50% 50%;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  background-color: #fef0cd;
+  transition: 0.5s;
+}
+.product-wrrap .image:hover::before {
+  background-color: #fbb403;
+}
