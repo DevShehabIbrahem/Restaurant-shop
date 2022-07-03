@@ -1,0 +1,54 @@
+.cover-section {
+  background-image: url("../../Asset/VideoSection.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 500px;
+  background-position: center;
+}
+.cover-section .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.cover-section .content .shape {
+  position: relative;
+  width: 250px;
+  height: 200px;
+}
+.cover-section .content .shape img {
+  width: 100%;
+  height: 100%;
+}
+.cover-section .content .price {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  flex-direction: column;
+}
+.cover-section .content .price .icon {
+  position: absolute;
+  display: flex;
+  top: 172px;
+  font-size: 69px;
+  right: 61px;
+  border: 2px solid yellow;
+  background: #fff;
+  border-radius: 100px;
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-10%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
