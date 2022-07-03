@@ -5,6 +5,7 @@ import {
   OthersArea,
   BurgerSlider,
 } from "../../Components";
+import VideoSection from "../videoSection/VideoSection";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <WelcomeSection />
       <OthersArea />
       <BurgerSlider />
+      <VideoSection />
     </>
   );
 };

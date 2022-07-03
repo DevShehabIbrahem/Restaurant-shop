@@ -1,6 +1,5 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Bounce } from "react-reveal";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,6 +11,7 @@ import { data } from "../../data/Data";
 
 const BurgerSlider = () => {
   const { products } = data;
+
   return (
     <>
       <Swiper
