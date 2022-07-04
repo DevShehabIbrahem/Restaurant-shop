@@ -79,12 +79,12 @@ const ChooseOrder = () => {
           {tabs.map((i) => (
             <div className={state === i ? "show" : "none"}>
               <Bounce bottom>
-                <div className="flex flex-col lg:flex-row justify-between items-center max-w-7xl mx-auto space-y-7 lg:space-x-9">
+                <div className="flex flex-col lg:flex-row justify-between items-center max-w-7xl mx-auto space-y-7 lg:space-y-0 lg:space-x-9">
                   <div className="flex flex-col border-dotted	border-[#ce7b04] border-2 p-5">
                     {choooseOrderConentOne.map(
                       ({ title, price, Dotet, dec }) => (
                         <>
-                          <div className="flex items-center font-extrabold text-[22px] lg:text-[25px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer	">
+                          <div className="flex items-center font-extrabold text-[22px] lg:text-[25px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer  	">
                             {title}
                             <b>{Dotet}</b>
                             <span className="text-[#b86b01]">${price}</span>
@@ -95,11 +95,11 @@ const ChooseOrder = () => {
                     )}
                   </div>
 
-                  <div className="flex flex-col border-dotted	border-[#ce7b04] border-2 p-5 ">
+                  <div className="flex flex-col border-dotted	border-[#ce7b04] border-2 p-5">
                     {choooseOrderConentTow.map(
                       ({ title, price, Dotet, dec }) => (
                         <>
-                          <div className="flex items-center font-extrabold  text-[22px] lg:text-[25px] hover:text-[#ce7b04] transition-all duration-500	">
+                          <div className="flex items-center font-extrabold  text-[22px] lg:text-[25px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer 	">
                             {title}
                             <b>{Dotet}</b>
                             <span className="text-[#b86b01]">${price}</span>
