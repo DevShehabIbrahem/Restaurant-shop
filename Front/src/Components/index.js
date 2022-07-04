@@ -3,3 +3,5 @@ export { default as Carousel } from "./carousel/Carousel.jsx";
 export { default as WelcomeSection } from "./Welcome/WelcomeSection.jsx";
 export { default as OthersArea } from "./OrderSection/OrderSection.jsx";
 export { default as BurgerSlider } from "./BurgerSlider/BurgerSlider.jsx";
+export { default as VideoSection } from "./videoSection/VideoSection";
+export { default as ChooseOrder } from "./chooseOrder/ChooseOrder";

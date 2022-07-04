@@ -2,8 +2,9 @@ import React from "react";
 import Modal from "react-modal";
 import YouTube from "react-youtube";
 import "../../css/VideoModal/VideoModal.css";
+import { Bounce } from "react-reveal";
 
-const VideoModal = ({ closeModal, close, isOpen }) => {
+const VideoModal = ({ closeModal, isOpen }) => {
   const opts = {
     height: "600px",
     width: "1000px",
@@ -25,7 +26,9 @@ const VideoModal = ({ closeModal, close, isOpen }) => {
           <span className="close-modal" onClick={closeModal}>
             &times;
           </span>
-          <YouTube videoId="XqyEADY_20Y" opts={opts} />
+          <Bounce top>
+            <YouTube videoId="XqyEADY_20Y" opts={opts} />
+          </Bounce>
         </Modal>
       )}
     </>

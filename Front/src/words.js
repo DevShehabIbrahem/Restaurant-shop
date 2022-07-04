@@ -18,4 +18,7 @@ export const words = {
 
   quality: "Quality Products",
   Expected: "Burgers As Expected Dilicious One",
+  tabs: [0, 1, 2],
+  Pricing: "Pricing Lists",
+  Choose: "Choose & Order Now!",
 };

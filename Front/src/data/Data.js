@@ -23,6 +23,7 @@ export const data = {
       dec: "Learning do amet contur diiscivt suia non nuameius velit modi",
     },
   ],
+
   products: [
     {
       title: "Creazy burger",
@@ -48,6 +49,63 @@ export const data = {
       price: 35.5,
       dec: "Rearning do amet contur dicivt suia non nuameius velit",
       imageUrl: require("../Asset/Prodcuts/4.png"),
+    },
+  ],
+  choooseOrder: [
+    {
+      id: 1,
+      imgaeurl: require("../Asset/icons/2.png"),
+      title: "burger",
+    },
+    {
+      id: 2,
+      imgaeurl: require("../Asset/icons/3.png"),
+      title: "potato",
+    },
+    {
+      id: 3,
+      imgaeurl: require("../Asset/icons/4.png"),
+      title: "pizzas",
+    },
+  ],
+  choooseOrderConentOne: [
+    {
+      title: "London Dry Ginger Kai ",
+      dec: "Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse ultrices gravida.",
+      price: "30",
+      Dotet: "..................",
+    },
+    {
+      title: "Magninil's Apple Juice",
+      dec: "Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse ultrices gravida.",
+      price: "30",
+      Dotet: "..................",
+    },
+    {
+      title: "6 Piece Sostikno Sticks",
+      dec: "Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse ultrices gravida.",
+      price: "30",
+      Dotet: "..................",
+    },
+  ],
+  choooseOrderConentTow: [
+    {
+      title: "Ocean Spray Swits Juice",
+      dec: "Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse ultrices gravida.",
+      price: "30",
+      Dotet: "..................",
+    },
+    {
+      title: "Smoked Brisket Sandwich",
+      dec: "Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse ultrices gravida.",
+      price: "30",
+      Dotet: "..................",
+    },
+    {
+      title: "Japanies Dilicious Burger",
+      dec: "Lorem ipsum dolor sit amet consectetur adipiscing ipsum suspendisse ultrices gravida.",
+      price: "30",
+      Dotet: "..................",
     },
   ],
 };

@@ -1,0 +1,24 @@
+.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 50px;
+  
+}
+.style{
+    border: 2px dotted #fd9503;
+    padding: 1.25rem;
+    max-width: 20.666667%;
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+
+}
+.none{
+    display: none;
+}
+.show{
+    display: flex;
+    
+}
