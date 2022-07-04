@@ -7,7 +7,7 @@ import { words } from "../../words.js";
 
 const ChooseOrder = () => {
   const { tabs, Choose, Pricing } = words;
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [state, setState] = useState(0);
 
   const { choooseOrder, choooseOrderConentOne, choooseOrderConentTow } = data;
