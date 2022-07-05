@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&family=Pangolin&family=Poppins:ital,wght@0,400;0,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap");
+.delivery-wrraper {
+  background-color: #fef1d2;
+  padding: 100px 0;
+  margin: 100px 0;
+}
+.delivery-wrraper .delivery-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .delivery-wrraper .delivery-content {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 50px;
+  }
+}
+@media (min-width: 768px) {
+  .delivery-wrraper .delivery-content {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 50px;
+  }
+}
+@media (min-width: 1000px) {
+  .delivery-wrraper .delivery-content {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}
+.delivery-wrraper .delivery-content .delivery-image img {
+  max-width: 600px;
+}
+@media (max-width: 767px) {
+  .delivery-wrraper .delivery-content .delivery-image img {
+    max-width: 400px;
+  }
+}
+@media (min-width: 1000px) {
+  .delivery-wrraper .delivery-content .delivery-image img {
+    max-width: 450px;
+  }
+}
+.delivery-wrraper .delivery-content .delivery-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 37rem;
+}
+.delivery-wrraper .delivery-content .delivery-info span {
+  font-family: "Pangolin", cursive;
+  font-weight: 400;
+  color: #c24907;
+  font-size: 25px;
+}
+.delivery-wrraper .delivery-content .delivery-info h1 {
+  font-size: 48px;
+  font-weight: 800;
+  font-family: "Heebo", sans-serif;
+}
+.delivery-wrraper .delivery-content .delivery-info p {
+  color: #737373;
+  line-height: 40px;
+  margin: 20px 0;
+}
+@media (max-width: 767px) {
+  .delivery-wrraper .delivery-content .delivery-info {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+  .delivery-wrraper .delivery-content .delivery-info h1 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .delivery-wrraper .delivery-content .delivery-info {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+  .delivery-wrraper .delivery-content .delivery-info h1 {
+    font-size: 40px;
+  }
+}
+.delivery-wrraper .delivery-content .delivery-info .delivery-button {
+  display: flex;
+  align-items: center;
+}
+.delivery-wrraper .delivery-content .delivery-info .delivery-button button {
+  font-size: 18px;
+  font-weight: 100;
+  padding: 12px;
+  border-radius: 20px;
+}
+.delivery-wrraper .delivery-content .delivery-info .delivery-button button:nth-child(1) {
+  background-color: #fbb403;
+  margin-right: 25px;
+}
+.delivery-wrraper .delivery-content .delivery-info .delivery-button button:nth-child(2) {
+  background-color: #1d1d1d;
+  color: #fff;
+}

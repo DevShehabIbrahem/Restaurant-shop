@@ -6,9 +6,9 @@ const sass = gulpSass(require("sass"));
 //Compile The sass files To Css and move it To New Dest
 gulp.task("sass", async () => {
   gulp
-    .src("src/Components/**/*.scss")
+    .src("src/Components/**/*.scss") // sass
 
-    .pipe(sass())
+    .pipe(sass()) // css
 
     .pipe(gulp.dest("src/css"));
 });

@@ -9,6 +9,10 @@ const ChooseOrder = () => {
   const { tabs, Choose, Pricing } = words;
   const [show, setShow] = useState(true);
   const [state, setState] = useState(0);
+  console.log(
+    "🚀 ~ file: ChooseOrder.jsx ~ line 12 ~ ChooseOrder ~ state",
+    state
+  );
 
   const { choooseOrder, choooseOrderConentOne, choooseOrderConentTow } = data;
 
@@ -43,7 +47,7 @@ const ChooseOrder = () => {
       </div>
 
       <ul
-        className="flex items-center justify-around mb-[55px] "
+        className=" grid grid-cols-2 md:flex items-center justify-center  mb-[55px]"
         id="shehab"
         ref={eleemnt}
       >
@@ -57,11 +61,11 @@ const ChooseOrder = () => {
               className={
                 state === i
                   ? "style"
-                  : " border-2 border-black p-5 max-w-[20.666667%] flex overflow-hidden cursor-pointer"
+                  : " border-2 border-black p-5 mb-5 ml-10 flex overflow-hidden cursor-pointer"
               }
             >
-              <div className="w-[150px]  h-[85px] lg:h-[120px] mx-auto">
-                <div className="flex flex-col items-center justify-center w-[60px] mx-auto  lg:space-y-4  ">
+              <div className=" w-[150px] h-[85px] lg:h-[120px] mx-auto">
+                <div className="flex flex-col items-center justify-center w-[60px] mx-auto  lg:space-y-4">
                   <img src={item.imgaeurl} alt="" />
 
                   <h1 className="font-bold text-[20px] text-center">
