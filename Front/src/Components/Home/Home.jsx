@@ -6,6 +6,8 @@ import {
   BurgerSlider,
   VideoSection,
   ChooseOrder,
+  FoodGallery,
+  Delivery,
 } from "../../Components";
 
 const Home = () => {
@@ -18,6 +20,8 @@ const Home = () => {
       <BurgerSlider />
       <VideoSection />
       <ChooseOrder />
+      <FoodGallery />
+      <Delivery />
     </>
   );
 };

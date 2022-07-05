@@ -8,12 +8,18 @@ import "../../css/BurgerSlider/BurgerSlider.css";
 import "../../css/BurgerSlider/BurgerSlider.css";
 import { Autoplay } from "swiper";
 import { data } from "../../data/Data";
+import { words } from "../../words";
 
 const BurgerSlider = () => {
   const { products } = data;
+  const { Quality, Burgers } = words;
 
   return (
     <>
+      <div className="flex flex-col items-center justify-center space-y-2 my-10">
+        <p className="text-[#fd9503] text-[30px] font-bold">{Quality}</p>
+        <h1 className="text-[30px] font-bold">{Burgers}</h1>
+      </div>
       <Swiper
         breakpoints={{
           "@0.00": {

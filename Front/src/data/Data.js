@@ -67,6 +67,12 @@ export const data = {
       imgaeurl: require("../Asset/icons/4.png"),
       title: "pizzas",
     },
+
+    {
+      id: 5,
+      imgaeurl: require("../Asset/icons/6.png"),
+      title: "ٍSandwetch",
+    },
   ],
   choooseOrderConentOne: [
     {

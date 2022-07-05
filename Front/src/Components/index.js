@@ -5,3 +5,5 @@ export { default as OthersArea } from "./OrderSection/OrderSection.jsx";
 export { default as BurgerSlider } from "./BurgerSlider/BurgerSlider.jsx";
 export { default as VideoSection } from "./videoSection/VideoSection";
 export { default as ChooseOrder } from "./chooseOrder/ChooseOrder";
+export { default as FoodGallery } from "./Gallery/FoodGallery";
+export { default as Delivery } from "./DeliverySection/Delivery";
