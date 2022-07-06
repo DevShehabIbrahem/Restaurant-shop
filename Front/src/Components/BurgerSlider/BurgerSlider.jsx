@@ -18,7 +18,7 @@ const BurgerSlider = () => {
     <>
       <div className="flex flex-col items-center justify-center space-y-2 my-10">
         <p className="text-[#fd9503] text-[30px] font-bold">{Quality}</p>
-        <h1 className="text-[30px] font-bold">{Burgers}</h1>
+        <h1 className="text-[25px] md:text-[30px] font-bold">{Burgers}</h1>
       </div>
       <Swiper
         breakpoints={{
