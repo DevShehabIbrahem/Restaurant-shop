@@ -114,4 +114,12 @@ export const data = {
       Dotet: "..................",
     },
   ],
+  opening: [
+    { title: "Sunday", hours: "closed" },
+    { title: "Monday", hours: "8.00 - 20.00" },
+    { title: "Tuesday", hours: "10:00-5.00" },
+    { title: "Wednesday", hours: "10:00-5.00" },
+    { title: "Friday", hours: "10:00-5.00" },
+    { title: "Saturday", hours: "10:00-5.00" },
+  ],
 };
