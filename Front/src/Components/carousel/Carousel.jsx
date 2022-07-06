@@ -8,9 +8,10 @@ import "../../css/carousel/Carousel.css";
 import burger from "../../Asset/burger.png";
 import bg from "../../Asset/carousel.jpg";
 import { words } from "../../words";
-import { images } from "../../Asset";
+import { data } from "../../data/Data";
 
 const Carousel = () => {
+  const { images } = data;
   const { listOfCarousel } = words;
 
   return (
@@ -25,8 +26,8 @@ const Carousel = () => {
         }}
       >
         <Swiper className="mySwiper" navigation={true} modules={[Navigation]}>
-          {images.map((img) => (
-            <SwiperSlide className="flex justify-center items-center">
+          {images.map(({ imageUrl, id }) => (
+            <SwiperSlide className="flex justify-center items-center" key={id}>
               <div className="flex flex-col lg:flex-row items-center justify-between  max-w-7xl mt-12 lg:my-24">
                 <div className="carousel-info">
                   <img src={burger} alt="burger" />
@@ -35,8 +36,8 @@ const Carousel = () => {
                   <h1>{words.chicken}</h1>
 
                   <ul>
-                    {listOfCarousel.map((list) => (
-                      <li>
+                    {listOfCarousel.map((list, idx) => (
+                      <li key={idx}>
                         <span>
                           <IoMdShareAlt />
                         </span>
@@ -47,7 +48,7 @@ const Carousel = () => {
                 </div>
 
                 <div className="mb-10 w-[68%] lg:w-[50%]">
-                  <img src={img} alt="carousel" />
+                  <img src={imageUrl} alt="carousel" />
                 </div>
               </div>
             </SwiperSlide>

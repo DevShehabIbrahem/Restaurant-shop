@@ -9,6 +9,16 @@ export const data = {
     { title: "Craft Pizza", img: require("../Asset/Items/4.png") },
   ],
 
+  images: [
+    { id: 1, imageUrl: require("../Asset/SliderCarousel/sandw1.png") },
+    { id: 2, imageUrl: require("../Asset/SliderCarousel/Sandw.png") },
+    { id: 3, imageUrl: require("../Asset/SliderCarousel/sandow3.png") },
+  ],
+  footerItems: [
+    { id: 1, title: "+449 888 666 0000" },
+    { id: 2, title: "hello@handout.com" },
+    { id: 3, title: "855 Road, Brooklyn Street New York 600" },
+  ],
   othersection: [
     {
       title: "Mild Butter",

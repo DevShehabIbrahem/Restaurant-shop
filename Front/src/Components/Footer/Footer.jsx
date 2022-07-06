@@ -1,11 +1,10 @@
 import React from "react";
 import "../../css/Footer/Footer.css";
-import { BiPhoneCall, BiMessageAltCheck } from "react-icons/bi";
-import { FcAddressBook } from "react-icons/fc";
+import { BiPhoneCall } from "react-icons/bi";
 import { data } from "../../data/Data";
 
 const Footer = () => {
-  const { opening } = data;
+  const { opening, footerItems } = data;
   return (
     <>
       <footer>
@@ -13,7 +12,7 @@ const Footer = () => {
           <div className="footer-opening">
             <ul className="pt-5">
               {opening.map(({ title, hours }) => (
-                <li className="flex items-center text-center  ">
+                <li className="flex items-center text-center  " key={title}>
                   <h1 className="flex-1 mb-5">{title}</h1>
 
                   <span className="flex-1  mb-5">{hours}</span>
@@ -24,24 +23,15 @@ const Footer = () => {
           <div className="footer-address">
             <h1 className="text-[30px]">Address</h1>
             <ul className="pt-5">
-              <li className="flex items-center space-x-3">
-                <span>
-                  <BiPhoneCall />
-                </span>
-                <p>+449 888 666 0000</p>
-              </li>
-              <li className="flex items-center  space-x-3">
-                <span>
-                  <BiMessageAltCheck />
-                </span>
-                <p>hello@handout.com</p>
-              </li>
-              <li className="flex items-center  space-x-3">
-                <span>
-                  <FcAddressBook />
-                </span>
-                <p>855 Road, Brooklyn Street New York 600</p>
-              </li>
+              {footerItems.map(({ title, id }) => (
+                <li className="flex items-center space-x-3" key={id}>
+                  <span>
+                    <BiPhoneCall />
+                  </span>
+
+                  <p>{title}</p>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="map">
@@ -50,9 +40,9 @@ const Footer = () => {
               width="100%"
               height="300"
               style={{ border: 0 }}
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>

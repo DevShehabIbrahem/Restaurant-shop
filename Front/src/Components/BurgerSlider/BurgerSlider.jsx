@@ -53,7 +53,7 @@ const BurgerSlider = () => {
         }}
       >
         {products.map(({ imageUrl, dec, price, title }) => (
-          <SwiperSlide className="animation">
+          <SwiperSlide className="animation" key={title}>
             <div className="product-wrrap">
               <div className="image">
                 <img src={imageUrl} alt="prdoucts" />

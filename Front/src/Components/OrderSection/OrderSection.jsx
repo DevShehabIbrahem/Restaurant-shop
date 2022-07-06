@@ -14,7 +14,7 @@ const OrderSection = () => {
           <div className="flex flex-col justify-around">
             <Bounce left cascade>
               {othersection.map(({ title, dec }) => (
-                <div className="infoSection">
+                <div className="infoSection" key={title}>
                   <h1 className="font-bold text-[20px]">{title}</h1>
                   <p className="text-[#737373]">{dec}</p>
                 </div>
@@ -34,7 +34,7 @@ const OrderSection = () => {
 
           <div className="flex flex-col justify-around">
             {othersection.map(({ title, dec }) => (
-              <Bounce right cascade>
+              <Bounce right cascade key={title}>
                 <div className="infoSection">
                   <h1 className="font-bold text-[20px]">{title}</h1>
                   <p className="text-[#737373]">{dec}</p>

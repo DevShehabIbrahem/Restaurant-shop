@@ -47,12 +47,10 @@ const FoodGallery = () => {
           modules={[Pagination]}
           className="mySwiper"
         >
-          {Gallary.map((item) => (
-            <>
-              <SwiperSlide>
-                <img src={item} alt="" className="rounded" />
-              </SwiperSlide>
-            </>
+          {Gallary.map((item, idx) => (
+            <SwiperSlide key={idx}>
+              <img src={item} alt="" className="rounded" />
+            </SwiperSlide>
           ))}
         </Swiper>
       </div>

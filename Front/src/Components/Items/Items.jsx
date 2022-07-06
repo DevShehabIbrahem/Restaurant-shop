@@ -7,8 +7,11 @@ const Items = () => {
     <>
       <div className="max-w-6xl mx-auto my-32">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          {itemsWordsone.map((item) => (
-            <div className="flex flex-col items-center space-y-5 mb-12">
+          {itemsWordsone.map((item, idx) => (
+            <div
+              className="flex flex-col items-center space-y-5 mb-12"
+              key={idx}
+            >
               <Bounce left duration={2000}>
                 <img src={item.img} alt="items" />
               </Bounce>
@@ -19,8 +22,11 @@ const Items = () => {
             </div>
           ))}
 
-          {itemsWordtow.map((item) => (
-            <div className="flex flex-col items-center space-y-5 mb-12">
+          {itemsWordtow.map((item, idx) => (
+            <div
+              className="flex flex-col items-center space-y-5 mb-12"
+              key={idx}
+            >
               <Bounce left duration={2000}>
                 <img src={item.img} alt="items" />
               </Bounce>

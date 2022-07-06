@@ -4,12 +4,6 @@ export const iconsImages = {
   image3: require("../Asset/icons/4.png"),
 };
 
-export const images = [
-  require("../Asset/SliderCarousel/sandw1.png"),
-  require("../Asset/SliderCarousel/Sandw.png"),
-  require("../Asset/SliderCarousel/sandow3.png"),
-];
-
 export const Gallary = [
   require("../Asset/Gallary/image5.jpg"),
   require("../Asset/Gallary/image6.jpg"),

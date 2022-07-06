@@ -54,6 +54,7 @@ const ChooseOrder = () => {
         <>
           {choooseOrder.map((item, i) => (
             <li
+              key={i.toString()}
               onClick={(e) => {
                 handleActive(e);
                 handleTabs(i);
@@ -81,14 +82,17 @@ const ChooseOrder = () => {
       {show && (
         <>
           {tabs.map((i) => (
-            <div className={state === i ? "show" : "none"}>
+            <div className={state === i ? "show" : "none"} key={i.toString()}>
               <Bounce bottom>
                 <div className="flex flex-col lg:flex-row justify-between items-center max-w-7xl mx-auto space-y-7 lg:space-y-0 lg:space-x-9">
                   <div className="flex flex-col border-dotted	border-[#ce7b04] border-2 p-5">
                     {choooseOrderConentOne.map(
                       ({ title, price, Dotet, dec }) => (
                         <>
-                          <div className="flex items-center font-extrabold text-[22px] lg:text-[25px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer  	">
+                          <div
+                            className="flex items-center font-extrabold text-[22px] lg:text-[25px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer"
+                            key={title}
+                          >
                             {title}
                             <b>{Dotet}</b>
                             <span className="text-[#b86b01]">${price}</span>
@@ -102,14 +106,14 @@ const ChooseOrder = () => {
                   <div className="flex flex-col border-dotted	border-[#ce7b04] border-2 p-5">
                     {choooseOrderConentTow.map(
                       ({ title, price, Dotet, dec }) => (
-                        <>
-                          <div className="flex items-center font-extrabold  text-[22px] lg:text-[25px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer 	">
-                            {title}
-                            <b>{Dotet}</b>
-                            <span className="text-[#b86b01]">${price}</span>
-                          </div>
-                          <p className="text-[#737373] my-4">{dec}</p>
-                        </>
+                        <div
+                          className="flex items-center font-extrabold  text-[22px] lg:text-[25px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer"
+                          key={title}
+                        >
+                          {title}
+                          <b>{Dotet}</b>
+                          <span className="text-[#b86b01]">${price}</span>
+                        </div>
                       )
                     )}
                   </div>
