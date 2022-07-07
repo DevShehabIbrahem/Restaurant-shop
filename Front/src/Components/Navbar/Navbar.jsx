@@ -69,7 +69,13 @@ const Navbar = () => {
 
           <div className="online-order hidden lg:flex items-center space-x-7">
             <div className="relative cursor-pointer">
-              <b className="absolute top-[-19px] border-2 border-[#000] rounded-[100px] flex items-center justify-center right-[10px] text-[#fbb403]  w-[29px]">
+              <b
+                className={
+                  !styles
+                    ? "absolute top-[-19px] border-2 border-[#000] rounded-[100px] flex items-center justify-center right-[10px] text-[#fff]  w-[29px]"
+                    : "absolute top-[-19px] border-2 border-[#000] rounded-[100px] flex items-center justify-center right-[10px] text-[#fbb403]  w-[29px]"
+                }
+              >
                 {cartitems ? cartitems.length : 0}
               </b>
               <BiCartAlt
