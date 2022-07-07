@@ -36,25 +36,28 @@ export const data = {
 
   products: [
     {
+      id: 1,
       title: "Creazy burger",
       price: 65.5,
       dec: "Rearning do amet contur dicivt suia non nuameius velit",
       imageUrl: require("../Asset/Prodcuts/1.png"),
     },
     {
+      id: 2,
       title: "Beefcakes Burgers",
       price: 29.5,
       dec: "Rearning do amet contur dicivt suia non nuameius velit",
       imageUrl: require("../Asset/Prodcuts/2.png"),
     },
     {
+      id: 3,
       title: "The Crispy Bun",
       price: 50.5,
       dec: "Rearning do amet contur dicivt suia non nuameius velit",
-
       imageUrl: require("../Asset/Prodcuts/3.png"),
     },
     {
+      id: 4,
       title: "Bugout Burgers",
       price: 35.5,
       dec: "Rearning do amet contur dicivt suia non nuameius velit",
@@ -133,3 +136,24 @@ export const data = {
     { title: "Saturday", hours: "10:00-5.00" },
   ],
 };
+//Seconde Time Make the Order
+//check if this prodcts in this cart
+// const prodctsIsExist = products?.find((pro) => pro.id === product.id);
+// console.log(
+//   "🚀 ~ file: BurgerSlider.jsx ~ line 49 ~ AddToCart ~ prodctsIsExist",
+//   prodctsIsExist
+// );
+// const dublecate = { ...prodctsIsExist, qty: prodctsIsExist?.qty + 1 };
+//incress the number of prodcuts
+// const incressQTY = cartitems?.map((pro) =>
+//   pro.id === product.id ? dublecate : pro
+// );
+//First time make the order
+// const firstOrder = [...cartitems, { ...product, qty: 1 }];
+// console.log(firstOrder);
+//Update the incress Logic For second Time push
+// if (prodctsIsExist) {
+//   setCartitems(incressQTY);
+// } else {
+//   setCartitems(firstOrder);
+// }

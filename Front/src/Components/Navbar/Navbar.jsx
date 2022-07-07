@@ -5,8 +5,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Bounce from "react-reveal/Bounce";
 
 import "../../css/Navbar/Navbar.css";
+import { addcart } from "../../Redux/Slice/AddTocart";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const cartitems = useSelector(addcart);
+
   const [styles, setStyles] = useState(false);
   const [show, setShow] = useState(false);
   const { li } = words;
@@ -63,8 +67,11 @@ const Navbar = () => {
           </div>
           {/* End  Mobile-Menu*/}
 
-          <div className="online-order hidden lg:flex items-center space-x-7 ">
-            <div>
+          <div className="online-order hidden lg:flex items-center space-x-7">
+            <div className="relative cursor-pointer">
+              <b className="absolute top-[-19px] border-2 border-[#000] rounded-[100px] flex items-center justify-center right-[10px] text-[#fbb403]  w-[29px]">
+                {cartitems ? cartitems.length : 0}
+              </b>
               <BiCartAlt
                 fontSize={35}
                 className={styles ? "text-black" : "text-white"}

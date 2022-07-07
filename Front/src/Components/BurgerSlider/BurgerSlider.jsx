@@ -1,3 +1,7 @@
+import React, { useState, useEffect } from "react";
+
+import { useDispatch, useSelector } from "react-redux";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -9,10 +13,38 @@ import "../../css/BurgerSlider/BurgerSlider.css";
 import { Autoplay } from "swiper";
 import { data } from "../../data/Data";
 import { words } from "../../words";
-
+import { onadd } from "../../Redux/Slice/AddTocart";
 const BurgerSlider = () => {
   const { products } = data;
   const { Quality, Burgers } = words;
+
+  const dispatch = useDispatch();
+  const breakpoint = {
+    "@0.00": {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    "@0.75": {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    "@1.00": {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    "@1.20": {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    "@1.50": {
+      slidesPerView: 4,
+      spaceBetween: 15,
+    },
+  };
+
+  const AddToCart = (product) => {
+    dispatch(onadd(product));
+  };
 
   return (
     <>
@@ -21,28 +53,7 @@ const BurgerSlider = () => {
         <h1 className="text-[25px] md:text-[30px] font-bold">{Burgers}</h1>
       </div>
       <Swiper
-        breakpoints={{
-          "@0.00": {
-            slidesPerView: 1,
-            spaceBetween: 0,
-          },
-          "@0.75": {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          "@1.00": {
-            slidesPerView: 2,
-            spaceBetween: 15,
-          },
-          "@1.20": {
-            slidesPerView: 3,
-            spaceBetween: 15,
-          },
-          "@1.50": {
-            slidesPerView: 4,
-            spaceBetween: 15,
-          },
-        }}
+        breakpoints={breakpoint}
         modules={[Autoplay]}
         loop={true}
         loopFillGroupWithBlank={true}
@@ -52,17 +63,19 @@ const BurgerSlider = () => {
           disableOnInteraction: false,
         }}
       >
-        {products.map(({ imageUrl, dec, price, title }) => (
-          <SwiperSlide className="animation" key={title}>
+        {products.map((product) => (
+          <SwiperSlide className="animation" key={product.title}>
             <div className="product-wrrap">
               <div className="image">
-                <img src={imageUrl} alt="prdoucts" />
+                <img src={product.imageUrl} alt="prdoucts" />
 
                 <div className="content">
-                  <button>Order Online</button>
-                  <h1>{title}</h1>
-                  <p>{dec}</p>
-                  <span>${price}</span>
+                  <button type="sumbit" onClick={() => AddToCart(product)}>
+                    Order Online
+                  </button>
+                  <h1>{product.title}</h1>
+                  <p>{product.dec}</p>
+                  <span>${product.price}</span>
                 </div>
               </div>
             </div>

@@ -90,7 +90,7 @@ const ChooseOrder = () => {
                       ({ title, price, Dotet, dec }) => (
                         <>
                           <div
-                            className="flex items-center font-extrabold text-[22px] lg:text-[25px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer"
+                            className="flex items-center font-extrabold text-[22px] lg:text-[23px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer"
                             key={title}
                           >
                             {title}
@@ -106,14 +106,17 @@ const ChooseOrder = () => {
                   <div className="flex flex-col border-dotted	border-[#ce7b04] border-2 p-5">
                     {choooseOrderConentTow.map(
                       ({ title, price, Dotet, dec }) => (
-                        <div
-                          className="flex items-center font-extrabold  text-[22px] lg:text-[25px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer"
-                          key={title}
-                        >
-                          {title}
-                          <b>{Dotet}</b>
-                          <span className="text-[#b86b01]">${price}</span>
-                        </div>
+                        <>
+                          <div
+                            className="flex items-center font-extrabold text-[22px] lg:text-[23px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer"
+                            key={title}
+                          >
+                            {title}
+                            <b>{Dotet}</b>
+                            <span className="text-[#b86b01]">${price}</span>
+                          </div>
+                          <p className="text-[#737373] my-4">{dec}</p>
+                        </>
                       )
                     )}
                   </div>
