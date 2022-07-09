@@ -13,12 +13,18 @@ import "../../css/BurgerSlider/BurgerSlider.css";
 import { Autoplay } from "swiper";
 import { data } from "../../data/Data";
 import { words } from "../../words";
-import { onadd } from "../../Redux/Slice/AddTocart";
+import { TotalCartITems } from "../../Redux/Slice/AddTocart";
+
 const BurgerSlider = () => {
   const { products } = data;
   const { Quality, Burgers } = words;
 
   const dispatch = useDispatch();
+
+  const CartProducts = localStorage.getItem("CartItems");
+
+  const [cartItems, setCartItems] = useState(JSON.parse(CartProducts) || []);
+
   const breakpoint = {
     "@0.00": {
       slidesPerView: 1,
@@ -43,8 +49,30 @@ const BurgerSlider = () => {
   };
 
   const AddToCart = (product) => {
-    dispatch(onadd(product));
+    const exist = cartItems?.find((x) => x.id === product.id);
+
+    //second click
+    const incress = cartItems?.map((item) =>
+      item.id === product.id ? { ...exist, qty: exist?.qty + 1 } : item
+    );
+
+    //first click
+    const first = [...cartItems, { ...product, qty: 1 }];
+
+    if (exist) {
+      setCartItems(incress);
+    } else {
+      setCartItems(first);
+    }
   };
+
+  useEffect(() => {
+    localStorage.setItem("CartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  useEffect(() => {
+    dispatch(TotalCartITems(cartItems));
+  }, [dispatch, cartItems]);
 
   return (
     <>
@@ -52,6 +80,7 @@ const BurgerSlider = () => {
         <p className="text-[#fd9503] text-[30px] font-bold">{Quality}</p>
         <h1 className="text-[25px] md:text-[30px] font-bold">{Burgers}</h1>
       </div>
+
       <Swiper
         breakpoints={breakpoint}
         modules={[Autoplay]}
