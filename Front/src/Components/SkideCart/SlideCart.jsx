@@ -21,14 +21,14 @@ const SlideCart = ({ setSlide }) => {
   return (
     <>
       <Bounce right>
-        <div className="fixed top-0 w-[380px] bg-white  right-0 h-screen border-l-2 text-[#000] z-[1001] overflow-auto">
+        <div className="fixed top-0 w-[380px] bg-white right-0 h-screen border-l-2 text-[#000] z-[1001] overflow-auto">
+          <span className="close-modal" onClick={() => setSlide(false)}>
+            &times;
+          </span>
           {slide.length ? (
             <>
               {slide.map((item) => (
                 <div className="flex  items-center mb-10 ml-4 mt-10">
-                  <span className="close-modal" onClick={() => setSlide(false)}>
-                    &times;
-                  </span>
                   <div className="w-[28%]">
                     <img src={item.imageUrl} alt="" className="pr-2" />
                   </div>

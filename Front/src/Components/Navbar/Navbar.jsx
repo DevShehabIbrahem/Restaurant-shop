@@ -8,10 +8,15 @@ import "../../css/Navbar/Navbar.css";
 import { slideCartitems, totalInCart } from "../../Redux/Slice/AddTocart";
 import { useDispatch, useSelector } from "react-redux";
 import SlideCart from "../SkideCart/SlideCart";
+import { Fade } from "react-reveal";
+import MobileMenu from "./MobileMenu";
+import SlideCartMobile from "./SlideCartMobile";
+import CartItems from "./CartItems";
 
 const Navbar = () => {
   const [styles, setStyles] = useState(false);
   const [show, setShow] = useState(false);
+  const [mobileCart, setMobileCart] = useState(false);
   const [slide, setSlide] = useState(false);
   const dispatch = useDispatch();
   const TotalCart = useSelector(totalInCart);
@@ -37,6 +42,10 @@ const Navbar = () => {
     setSlide(true);
   };
 
+  const MobileCart = () => {
+    setMobileCart(!mobileCart);
+  };
+
   return (
     <>
       <nav>
@@ -44,8 +53,8 @@ const Navbar = () => {
           <div
             className={
               styles
-                ? "bg-white flex items-center justify-between lg:justify-around p-4 text-black duration-300 border-b-4 px-12"
-                : "flex items-center justify-between lg:justify-around p-4 lg:p-6 mx-auto lg:bg-transparent text-black lg:text-white duration-300 "
+                ? "bg-white flex items-center justify-between  p-4 text-black duration-300 border-b-4 px-12"
+                : "flex items-center justify-between  mx-auto p-4 lg:p-6  lg:bg-transparent text-black lg:text-white duration-300 "
             }
           >
             <div className="logo text-[30px] font-bold">Handout</div>
@@ -62,47 +71,43 @@ const Navbar = () => {
                 ))}
               </ul>
               {/* start  Mobile-Menu*/}
-              <Bounce left>
-                <ul className={show ? "showMenu" : "hideMenu"}>
-                  {li.map((item) => (
-                    <a href="##" key={item} className="text-[18px]">
-                      <Bounce left cascade>
-                        <li>{item}</li>
-                      </Bounce>
-                    </a>
-                  ))}
-                </ul>
-              </Bounce>
+              <MobileMenu li={li} show={show} />
+              {/* End  Mobile-Menu*/}
             </div>
-            {/* End  Mobile-Menu*/}
 
-            <div className="online-order hidden lg:flex items-center space-x-7">
-              <div className="relative cursor-pointer" onClick={SlideProduct}>
-                <b
-                  onClick={SlideProduct}
-                  className={
-                    !styles
-                      ? "absolute top-[-19px] border-2 border-[#000] rounded-[100px] flex items-center justify-center right-[10px] text-[#fff]  w-[29px]"
-                      : "absolute top-[-19px] border-2 border-[#000] rounded-[100px] flex items-center justify-center right-[10px] text-[#fbb403]  w-[29px]"
-                  }
-                >
-                  {TotalCart?.length}
-                </b>
-                <BiCartAlt
-                  fontSize={35}
-                  className={styles ? "text-black" : "text-white"}
-                />
+            {/*CartItems*/}
+            <CartItems
+              SlideProduct={SlideProduct}
+              styles={styles}
+              TotalCart={TotalCart}
+            />
+            {/*CartItems*/}
+
+            <div className=" lg:hidden flex items-center space-x-5">
+              <span
+                className=" text-[35px] cursor-pointer"
+                onClick={MobileCart}
+              >
+                ...
+              </span>
+
+              {/*Start-SlideCart-mobile*/}
+              <SlideCartMobile
+                mobileCart={mobileCart}
+                SlideProduct={SlideProduct}
+                TotalCart={TotalCart}
+                styles={styles}
+              />
+              {/*End-SlideCart*/}
+
+              {/*Icon-Menu*/}
+              <div
+                className="flex items-center space-x-7 cursor-pointer lg:hidden"
+                onClick={() => setShow(!show)}
+              >
+                <GiHamburgerMenu fontSize={35} />
               </div>
-
-              <button className="bg-orangeColor p-4 rounded-[100px] text-black font-semibold">
-                {words.button}
-              </button>
-            </div>
-            <div
-              className="flex items-center space-x-7 cursor-pointer  lg:hidden"
-              onClick={() => setShow(!show)}
-            >
-              <GiHamburgerMenu fontSize={35} />
+              {/*Icon-Menu*/}
             </div>
           </div>
         </div>
