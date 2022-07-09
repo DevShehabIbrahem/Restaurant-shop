@@ -3,6 +3,16 @@
     padding-top: 80px;
     z-index: 1;
     position: relative;
+    
+    .ReactModal__Content{
+       
+        display: flex;
+        justify-content: center;
+        align-items: baseline; 
+       
+       
+        
+    }
 }
 
 .close-modal{

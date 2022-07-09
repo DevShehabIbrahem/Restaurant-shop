@@ -20,14 +20,14 @@ const VideoModal = ({ closeModal, isOpen }) => {
         <Modal
           isOpen={true}
           ariaHideApp={false}
-          className="flex items-center justify-center w-full"
+          className="flex items-center justify-center w-full h-screen"
           onRequestClose={closeModal}
         >
           <span className="close-modal" onClick={closeModal}>
             &times;
           </span>
           <Bounce top>
-            <YouTube videoId="XqyEADY_20Y" opts={opts} />
+            <YouTube videoId="XqyEADY_20Y" opts={opts} className="w-full" />
           </Bounce>
         </Modal>
       )}

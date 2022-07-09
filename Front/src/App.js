@@ -8,7 +8,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import "./index.css";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const Time = setTimeout(() => {
       setLoading(true);

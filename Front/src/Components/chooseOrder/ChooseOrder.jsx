@@ -9,10 +9,6 @@ const ChooseOrder = () => {
   const { tabs, Choose, Pricing } = words;
   const [show, setShow] = useState(true);
   const [state, setState] = useState(0);
-  console.log(
-    "🚀 ~ file: ChooseOrder.jsx ~ line 12 ~ ChooseOrder ~ state",
-    state
-  );
 
   const { choooseOrder, choooseOrderConentOne, choooseOrderConentTow } = data;
 

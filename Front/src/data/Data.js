@@ -14,6 +14,7 @@ export const data = {
     { id: 2, imageUrl: require("../Asset/SliderCarousel/Sandw.png") },
     { id: 3, imageUrl: require("../Asset/SliderCarousel/sandow3.png") },
   ],
+
   footerItems: [
     { id: 1, title: "+449 888 666 0000" },
     { id: 2, title: "hello@handout.com" },
@@ -87,6 +88,7 @@ export const data = {
       title: "ٍSandwetch",
     },
   ],
+
   choooseOrderConentOne: [
     {
       title: "London Dry Ginger Kai ",
@@ -107,6 +109,7 @@ export const data = {
       Dotet: "..................",
     },
   ],
+
   choooseOrderConentTow: [
     {
       title: "Ocean Spray Swits Juice",
@@ -136,24 +139,3 @@ export const data = {
     { title: "Saturday", hours: "10:00-5.00" },
   ],
 };
-//Seconde Time Make the Order
-//check if this prodcts in this cart
-// const prodctsIsExist = products?.find((pro) => pro.id === product.id);
-// console.log(
-//   "🚀 ~ file: BurgerSlider.jsx ~ line 49 ~ AddToCart ~ prodctsIsExist",
-//   prodctsIsExist
-// );
-// const dublecate = { ...prodctsIsExist, qty: prodctsIsExist?.qty + 1 };
-//incress the number of prodcuts
-// const incressQTY = cartitems?.map((pro) =>
-//   pro.id === product.id ? dublecate : pro
-// );
-//First time make the order
-// const firstOrder = [...cartitems, { ...product, qty: 1 }];
-// console.log(firstOrder);
-//Update the incress Logic For second Time push
-// if (prodctsIsExist) {
-//   setCartitems(incressQTY);
-// } else {
-//   setCartitems(firstOrder);
-// }

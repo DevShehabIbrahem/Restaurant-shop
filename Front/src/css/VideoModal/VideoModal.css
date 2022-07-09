@@ -4,6 +4,11 @@
   z-index: 1;
   position: relative;
 }
+.ReactModal__Overlay .ReactModal__Content {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
 
 .close-modal {
   position: absolute;
