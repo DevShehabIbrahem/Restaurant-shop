@@ -1,35 +1,35 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { cartitems: [] };
+const initialState = {
+  totalItems: "",
+  slideCart: false,
+  counterQTy: 0,
+};
 
 const AddToCart = createSlice({
   name: "prducts",
   initialState,
-  reducers: {
-    onadd: (state, { payload }) => {
-      const exist = state.cartitems.find((x) => x.id === payload.id);
 
-      const incress = state.cartitems.map((item) =>
-        item.id === payload.id ? { ...exist, qty: exist.qty + 1 } : item
-      );
-      //first click
-      const first = [...state.cartitems, { ...payload, qty: 1 }];
-      if (exist) {
-        return {
-          ...state,
-          cartitems: incress,
-        };
-      } else {
-        return {
-          ...state,
-          cartitems: first,
-        };
-      }
+  reducers: {
+    TotalCartITems: (state, { payload }) => {
+      state.totalItems = payload;
+    },
+    slideCartitems: (state, { payload }) => {
+      state.slideCart = payload;
+    },
+    numbinc: (state, { payload }) => {
+      state.counterQTy += payload;
+    },
+    numbmin: (state, { payload }) => {
+      state.counterQTy -= payload;
     },
   },
 });
 export default AddToCart.reducer;
 
-export const { onadd } = AddToCart.actions;
+export const { TotalCartITems, slideCartitems, numbinc, numbmin } =
+  AddToCart.actions;
 
-export const addcart = (state) => state.addpro.cartitems;
+export const totalInCart = (state) => state.addpro.totalItems;
+export const slideCart = (state) => state.addpro.slideCart;
+export const counterQTy = (state) => state.addpro.counterQTy;
