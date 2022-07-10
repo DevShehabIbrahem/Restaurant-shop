@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,7 +13,7 @@ import "../../css/BurgerSlider/BurgerSlider.css";
 import { Autoplay } from "swiper";
 import { data } from "../../data/Data";
 import { words } from "../../words";
-import { TotalCartITems } from "../../Redux/Slice/AddTocart";
+import { TotalCartITems, totalInCart } from "../../Redux/Slice/AddTocart";
 
 const BurgerSlider = () => {
   const { products } = data;
@@ -21,9 +21,7 @@ const BurgerSlider = () => {
 
   const dispatch = useDispatch();
 
-  const CartProducts = localStorage.getItem("CartItems");
-
-  const [cartItems, setCartItems] = useState(JSON.parse(CartProducts) || []);
+  const total = useSelector(totalInCart);
 
   const breakpoint = {
     "@0.00": {
@@ -49,36 +47,32 @@ const BurgerSlider = () => {
   };
 
   const AddToCart = (product) => {
-    const exist = cartItems?.find((x) => x.id === product.id);
+    const exist = total?.find((x) => x.id === product.id);
 
     //second click
-    const incress = cartItems?.map((item) =>
+    const incress = total?.map((item) =>
       item.id === product.id ? { ...exist, qty: exist?.qty + 1 } : item
     );
 
     //first click
-    const first = [...cartItems, { ...product, qty: 1 }];
+    const first = [...total, { ...product, qty: 1 }];
 
     if (exist) {
-      setCartItems(incress);
+      dispatch(TotalCartITems(incress));
     } else {
-      setCartItems(first);
+      dispatch(TotalCartITems(first));
     }
   };
 
   useEffect(() => {
-    localStorage.setItem("CartItems", JSON.stringify(cartItems));
-  }, [cartItems]);
-
-  useEffect(() => {
-    dispatch(TotalCartITems(cartItems));
-  }, [dispatch, cartItems]);
+    localStorage.setItem("CartItems", JSON.stringify(total));
+  }, [total]);
 
   return (
     <>
       <div className="flex flex-col items-center justify-center space-y-2 my-10">
         <p className="text-[#fd9503] text-[30px] font-bold">{Quality}</p>
-        <h1 className="text-[25px] md:text-[30px] font-bold">{Burgers}</h1>
+        <h1 className="text-[17px] md:text-[30px] font-bold">{Burgers}</h1>
       </div>
 
       <Swiper

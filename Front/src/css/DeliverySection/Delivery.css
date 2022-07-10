@@ -38,7 +38,7 @@
 }
 @media (max-width: 767px) {
   .delivery-wrraper .delivery-content .delivery-image img {
-    max-width: 400px;
+    max-width: 300px;
   }
 }
 @media (min-width: 1000px) {
@@ -68,6 +68,13 @@
   margin: 20px 0;
 }
 @media (max-width: 767px) {
+  .delivery-wrraper .delivery-content .delivery-info p {
+    line-height: 30px;
+    font-size: 15px;
+    margin: 15px 0;
+  }
+}
+@media (max-width: 767px) {
   .delivery-wrraper .delivery-content .delivery-info {
     flex-direction: column;
     justify-content: center;
@@ -75,6 +82,11 @@
   }
   .delivery-wrraper .delivery-content .delivery-info h1 {
     font-size: 30px;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .delivery-wrraper .delivery-content .delivery-info h1 {
+    font-size: 20px;
   }
 }
 @media (min-width: 768px) {
@@ -101,7 +113,19 @@
   background-color: #fbb403;
   margin-right: 25px;
 }
+@media (max-width: 767px) {
+  .delivery-wrraper .delivery-content .delivery-info .delivery-button button:nth-child(1) {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
 .delivery-wrraper .delivery-content .delivery-info .delivery-button button:nth-child(2) {
   background-color: #1d1d1d;
   color: #fff;
+}
+@media (max-width: 767px) {
+  .delivery-wrraper .delivery-content .delivery-info .delivery-button button:nth-child(2) {
+    font-size: 16px;
+    font-weight: 600;
+  }
 }

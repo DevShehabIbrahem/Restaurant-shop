@@ -1,7 +1,6 @@
 $bg: #fef1d2;
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&family=Pangolin&family=Poppins:ital,wght@0,400;0,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&family=Pangolin&family=Poppins:ital,wght@0,400;0,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap");
 
 .delivery-wrraper {
   background-color: $bg;
@@ -12,133 +11,114 @@ $bg: #fef1d2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 80rem;   
-         
+    max-width: 80rem;
+
     margin: 0 auto;
-   
-    @media (max-width:767px) {
 
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 50px;
-       
+    @media (max-width: 767px) {
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 50px;
     }
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 50px;
+    }
+    @media (min-width: 1000px) {
+      flex-direction: row;
 
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 50px;
-       
+      justify-content: space-between;
+      margin: 0 auto;
     }
-    @media (min-width:1000px) {
-        flex-direction: row;
-       
-        justify-content: space-between;
-        margin: 0 auto;
-    
-         
 
-       
-    }
-    
     .delivery-image {
-       
       img {
         max-width: 600px;
-        
-        @media (max-width:767px) {
-            max-width: 400px;
-           
-        }
-        @media (min-width:1000px) {
-            max-width: 450px;
-           
-         
-             
-    
-           
-        }
 
+        @media (max-width: 767px) {
+          max-width: 300px;
+        }
+        @media (min-width: 1000px) {
+          max-width: 450px;
+        }
       }
-     
-     
     }
     .delivery-info {
       display: flex;
       flex-direction: column;
-         max-width: 37rem;
-      span{
-        font-family: 'Pangolin', cursive;
+      max-width: 37rem;
+      span {
+        font-family: "Pangolin", cursive;
         font-weight: 400;
-        color:#c24907;
+        color: #c24907;
         font-size: 25px;
       }
-      h1{
+      h1 {
         font-size: 48px;
         font-weight: 800;
 
-        font-family: 'Heebo', sans-serif;
-
+        font-family: "Heebo", sans-serif;
       }
-      p{
+      p {
         color: #737373;
         line-height: 40px;
-        margin:20px 0;
+        margin: 20px 0;
+        @media (max-width: 767px) {
+          line-height: 30px;
+            font-size: 15px;
+            margin: 15px 0;
+          }
       }
 
-      @media (max-width:767px) {
-
+      @media (max-width: 767px) {
         flex-direction: column;
         justify-content: center;
         margin-bottom: 60px;
-     
-          h1{
-            font-size: 30px;
-            
-    
-          }
-       
-         
-    }
-      @media (min-width:768px) {
 
+        h1 {
+          font-size: 30px;
+          @media (max-width: 767px) {
+            font-size: 20px;
+          }
+        }
+      }
+      @media (min-width: 768px) {
         flex-direction: column;
         justify-content: center;
         margin-bottom: 60px;
-     
-        
-          h1{
-            font-size: 40px;
-            
-    
-          }
-       
-    }
-    @media (min-width:1000px) {
-       
-     
-         
 
-       
-    }
-  
+        h1 {
+          font-size: 40px;
+         
+        }
+      }
+     
+
       .delivery-button {
         display: flex;
         align-items: center;
-        button{
-            font-size: 18px;
-            font-weight: 100;
-            padding:12px;
-            border-radius: 20px;
-
+        button {
+          font-size: 18px;
+          font-weight: 100;
+          padding: 12px;
+          border-radius: 20px;
         }
         button:nth-child(1) {
           background-color: #fbb403;
           margin-right: 25px;
+          @media (max-width: 767px) {
+            font-size: 16px;
+            font-weight: 600;
+          }
         }
         button:nth-child(2) {
           background-color: #1d1d1d;
-          color:#fff
+          color: #fff;
+          @media (max-width: 767px) {
+            font-size: 16px;
+            font-weight: 600;
+          }
         }
       }
     }

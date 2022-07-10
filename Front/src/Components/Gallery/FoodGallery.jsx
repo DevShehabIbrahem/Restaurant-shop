@@ -21,7 +21,7 @@ const FoodGallery = () => {
         <h1 className="text-[30px] font-bold">{Gallery}</h1>
       </div>
 
-      <div className="mx-[80px]">
+      <div className="md:mx-[80px]">
         <Swiper
           slidesPerView={3}
           spaceBetween={10}

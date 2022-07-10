@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiCartAlt } from "react-icons/bi";
+import { useSelector } from "react-redux";
 import { Fade } from "react-reveal";
+import { totalInCart } from "../../Redux/Slice/AddTocart";
 import { words } from "../../words";
 
-const SlideCartMobile = ({ mobileCart, SlideProduct, TotalCart, styles }) => {
+const SlideCartMobile = ({ mobileCart, SlideProduct, styles }) => {
+  const total = useSelector(totalInCart);
   return (
     <>
       {mobileCart && (
@@ -19,7 +22,7 @@ const SlideCartMobile = ({ mobileCart, SlideProduct, TotalCart, styles }) => {
                       : "absolute top-[-19px] border-2 border-[#000] rounded-[100px] flex items-center justify-center right-[10px] text-[#fbb403]  w-[29px]"
                   }
                 >
-                  {TotalCart?.length}
+                  {total?.length}
                 </b>
                 <BiCartAlt fontSize={35} className="text-black" />
               </div>

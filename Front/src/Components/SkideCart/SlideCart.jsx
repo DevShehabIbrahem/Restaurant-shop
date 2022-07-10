@@ -3,21 +3,18 @@ import { TotalCartITems, totalInCart } from "../../Redux/Slice/AddTocart";
 import { Bounce } from "react-reveal";
 
 import "../../css/SkideCart/SlideCart.css";
+
 const SlideCart = ({ setSlide }) => {
-  const slide = useSelector(totalInCart);
-
   const dispatch = useDispatch();
-
-  const localData = JSON.parse(localStorage.getItem("CartItems"));
+  const total = useSelector(totalInCart);
 
   const DeleteItems = (item) => {
-    const deleteItems = localData.filter((product) => product.id !== item.id);
-    //update the new array
-    localStorage.setItem("CartItems", JSON.stringify(deleteItems));
+    const deleteItems = total.filter((product) => product.id !== item.id);
 
     //disaptch the action To update the State inside the redux
     dispatch(TotalCartITems(deleteItems));
   };
+
   return (
     <>
       <Bounce right>
@@ -25,10 +22,11 @@ const SlideCart = ({ setSlide }) => {
           <span className="close-modal" onClick={() => setSlide(false)}>
             &times;
           </span>
-          {slide.length ? (
+
+          {total.length ? (
             <>
-              {slide.map((item) => (
-                <div className="flex  items-center mb-10 ml-4 mt-10">
+              {total.map((item, idx) => (
+                <div className="flex  items-center mb-10 ml-4 mt-10" key={idx}>
                   <div className="w-[28%]">
                     <img src={item.imageUrl} alt="" className="pr-2" />
                   </div>
@@ -37,6 +35,7 @@ const SlideCart = ({ setSlide }) => {
                       <span className="font-bold">Name: </span>
                       {item.title}
                     </h1>
+
                     <div className="font-bold flex flex-col items-start  space-y-2">
                       <div>
                         <b>Qty: </b>

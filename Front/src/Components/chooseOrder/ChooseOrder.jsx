@@ -39,11 +39,11 @@ const ChooseOrder = () => {
     <div className="my-[100px]">
       <div className="flex flex-col items-center justify-center space-y-2 my-10">
         <p className="text-[#fd9503] text-[30px] font-bold">{Pricing}</p>
-        <h1 className="text-[30px] font-bold">{Choose}</h1>
+        <h1 className="text-[21] md:text-[30px] font-bold">{Choose}</h1>
       </div>
 
       <ul
-        className=" grid grid-cols-2 md:flex items-center justify-center  mb-[55px]"
+        className=" grid grid-cols-2 justify-items-center md:flex items-center justify-center  mb-[55px]"
         id="shehab"
         ref={eleemnt}
       >
@@ -58,10 +58,10 @@ const ChooseOrder = () => {
               className={
                 state === i
                   ? "style"
-                  : " border-2 border-black p-5 mb-5 ml-10 flex overflow-hidden cursor-pointer"
+                  : " border-2 border-black p-[10px] md:p-5 mb-5 mx-10 flex overflow-hidden cursor-pointer"
               }
             >
-              <div className=" w-[150px] h-[85px] lg:h-[120px] mx-auto">
+              <div className="w-[150px] h-[85px] lg:h-[120px] mx-auto">
                 <div className="flex flex-col items-center justify-center w-[60px] mx-auto  lg:space-y-4">
                   <img src={item.imgaeurl} alt="" />
 
@@ -86,7 +86,7 @@ const ChooseOrder = () => {
                       ({ title, price, Dotet, dec }) => (
                         <>
                           <div
-                            className="flex items-center font-extrabold text-[22px] lg:text-[23px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer"
+                            className="flex items-center font-extrabold text-[17px]  lg:text-[23px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer"
                             key={title}
                           >
                             {title}
@@ -104,7 +104,7 @@ const ChooseOrder = () => {
                       ({ title, price, Dotet, dec }) => (
                         <>
                           <div
-                            className="flex items-center font-extrabold text-[22px] lg:text-[23px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer"
+                            className="flex items-center font-extrabold text-[16px] lg:text-[23px] hover:text-[#ce7b04] transition-all duration-500 cursor-pointer"
                             key={title}
                           >
                             {title}

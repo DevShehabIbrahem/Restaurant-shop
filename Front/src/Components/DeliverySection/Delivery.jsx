@@ -15,10 +15,11 @@ const Delivery = () => {
   return (
     <div className="delivery-wrraper">
       <div className="delivery-content">
-        <div className=" delivery-info">
+        <div className="delivery-info">
           <span>{delivery}</span>
           <h1>{deliveryTitle}</h1>
           <p>{deliverydec}</p>
+
           <div className="delivery-button">
             <button>{deliveryButton}</button>
             <button>{deliveryBlackButton}</button>

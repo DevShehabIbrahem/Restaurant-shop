@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { words } from "../../words";
-import { BiCartAlt } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
-import Bounce from "react-reveal/Bounce";
 
 import "../../css/Navbar/Navbar.css";
-import { slideCartitems, totalInCart } from "../../Redux/Slice/AddTocart";
-import { useDispatch, useSelector } from "react-redux";
+import { slideCartitems } from "../../Redux/Slice/AddTocart";
+import { useDispatch } from "react-redux";
 import SlideCart from "../SkideCart/SlideCart";
-import { Fade } from "react-reveal";
 import MobileMenu from "./MobileMenu";
 import SlideCartMobile from "./SlideCartMobile";
 import CartItems from "./CartItems";
@@ -19,8 +16,6 @@ const Navbar = () => {
   const [mobileCart, setMobileCart] = useState(false);
   const [slide, setSlide] = useState(false);
   const dispatch = useDispatch();
-  const TotalCart = useSelector(totalInCart);
-
   const { li } = words;
 
   const Scroll = () => {
@@ -76,11 +71,7 @@ const Navbar = () => {
             </div>
 
             {/*CartItems*/}
-            <CartItems
-              SlideProduct={SlideProduct}
-              styles={styles}
-              TotalCart={TotalCart}
-            />
+            <CartItems SlideProduct={SlideProduct} styles={styles} />
             {/*CartItems*/}
 
             <div className=" lg:hidden flex items-center space-x-5">
@@ -95,7 +86,6 @@ const Navbar = () => {
               <SlideCartMobile
                 mobileCart={mobileCart}
                 SlideProduct={SlideProduct}
-                TotalCart={TotalCart}
                 styles={styles}
               />
               {/*End-SlideCart*/}
